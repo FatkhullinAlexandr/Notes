@@ -1,0 +1,17 @@
+{
+    "name": "noootess",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "client": "npm run start --prefix client",
+        "server": "npm run dev --prefix server",
+        "dev": "concurrently \"npm run client\" \"npm run server\""
+    },
+    "keywords": [],
+    "author": "Alexandr Fatkhullin <sasha-fatkhullin@mail.ru>",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^7.3.0"
+    }
+}

@@ -1,0 +1,185 @@
+.notes {
+    background: #161b22;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 900px;
+    @media (max-width: 650px) {
+        padding: 10px;
+    }
+
+    &-header {
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid #494949;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-add {
+        background: none;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+        white-space: nowrap;
+        svg {
+            margin-right: 3px;
+            path {
+                transition: all 0.3s ease-in-out;
+                fill: #ffffff;
+            }
+        }
+        &:hover {
+            color: $main;
+            svg {
+                path {
+                    fill: $main;
+                }
+            }
+        }
+        @media (max-width: 650px) {
+            margin-left: 20px;
+            span {
+                display: none;
+            }
+            svg {
+                height: 30px !important;
+                width: 30px !important;
+            }
+        }
+    }
+
+    &-search {
+        background: #0d1117;
+        border: 0.5px solid #494949;
+        border-radius: 10px;
+        width: 400px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        &.focus {
+            border: 0.5px solid $main;
+        }
+        input {
+            background: none;
+            font-size: 16px;
+            color: #ffffff;
+            width: 100%;
+            height: 30px;
+            &:focus ~ .notes-search {
+                color: #ffffff;
+                border: 0.5px solid $main;
+            }
+        }
+        svg {
+            margin-right: 10px;
+            &.focus {
+                path {
+                    transition: all 0.3s ease-in-out;
+                    fill: $main;
+                }
+            }
+            path {
+                fill: rgba(255, 255, 255, 0.49);
+            }
+        }
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.49);
+        }
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+    }
+}
+
+.note {
+    width: 100%;
+    padding: 15px 20px;
+    background: #0d1117;
+    border-radius: 5px;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    @media (min-width: 996px) {
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            background: $main;
+            .note-button {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    @media (max-width: 650px) {
+        padding: 5px;
+    }
+
+    &-body {
+        display: grid;
+        grid-template-columns: 60% 20% 20%;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    &-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &-date {
+        text-align: right;
+        @media (max-width: 650px) {
+            font-size: 13px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.3s ease-in-out;
+        @media (min-width: 996px) {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 3px;
+            background: none;
+            transition: background 0.3s ease-in-out;
+            &:hover {
+                background: #e7e7e7;
+
+                svg {
+                    path {
+                        fill: #d44d4d;
+                    }
+                }
+            }
+
+            svg {
+                path {
+                    transition: fill 0.3s ease-in-out;
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+}

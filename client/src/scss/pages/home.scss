@@ -1,0 +1,13 @@
+.home {
+    width: 100%;
+    min-height: 100%;
+    background: #0d1117;
+    padding-bottom: 30px;
+
+    &-body {
+        max-width: 1400px;
+        padding: 0 10px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+}

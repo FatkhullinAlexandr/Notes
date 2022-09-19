@@ -1,0 +1,47 @@
+.warning {
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    height: 50px;
+    min-width: 250px;
+    padding: 5px 10px;
+    border: 1px solid $main;
+    border-radius: 10px;
+    background: #0d1117;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateX(-30%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    span {
+        color: #fff;
+        margin-right: 20px;
+    }
+
+    button {
+        background: none;
+        svg {
+            path {
+                fill: #fff;
+                transition: fill 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: $main;
+                }
+            }
+        }
+    }
+}

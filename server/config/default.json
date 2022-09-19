@@ -1,0 +1,5 @@
+{
+    "port": 5555,
+    "mongoUri": "mongodb+srv://tony:050697sa@cluster0.aqjqk4g.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "notes secret key"
+}

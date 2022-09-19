@@ -1,0 +1,42 @@
+.header {
+    background: #171c29;
+    color: #ffffff;
+
+    &-container {
+        max-width: 1400px;
+        padding: 0 10px;
+        margin: 0 auto;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        svg {
+            path {
+                fill: $main;
+            }
+        }
+    }
+
+    &-button {
+        width: 120px;
+        height: 40px;
+        border: 1px solid #28a6b7;
+        border-radius: 10px;
+        background: none;
+        margin-left: 65px;
+        color: $main;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background: $main;
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.detail {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    &-header {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            background: none;
+            &:hover {
+                svg {
+                    path {
+                        transition: fill 0.3s ease-in-out;
+                        fill: $main;
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        width: 600px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        @media (max-width: 650px) {
+            width: 300px;
+            height: 370px;
+            padding: 10px;
+        }
+    }
+
+    &-input {
+        display: flex;
+        flex-direction: column-reverse;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+            @media (max-width: 650px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-item {
+            border: 0.5px solid #494949;
+            border-radius: 10px;
+            padding: 5px 10px;
+            transition: all 0.3s ease-in-out;
+            color: #000;
+            font-size: 18px;
+            width: 100%;
+            &:focus {
+                color: #000;
+                border: 0.5px solid $main;
+            }
+            &:focus ~ label {
+                color: $main;
+            }
+        }
+        input {
+            height: 40px;
+        }
+        textarea {
+            resize: none;
+        }
+        label {
+            line-height: 19px;
+            color: #0d1117;
+            margin-bottom: 7px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-button-create {
+        background: #28a6b7;
+        border: 0.5px solid $main;
+        border-radius: 10px;
+        line-height: 19px;
+        color: #ffffff;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            border: 0.5px solid $main;
+            background: none;
+            color: $main;
+        }
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+            &:hover {
+                background: #28a6b7;
+                color: #ffffff;
+                border: none;
+            }
+        }
+    }
+}

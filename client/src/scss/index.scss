@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import 'null';
+
+$main: #28a6b7;
+
+@import './pages/auth';
+@import './pages/home';
+
+@import './components/header';
+@import './components/notes';
+@import './components/loader';
+@import './components/warning';
+@import './components/modal';
+@import './components/alert';
+@import './components/detail';
+
+.App {
+    height: 100vh;
+    font-family: 'Inter';
+    font-size: 16px;
+}
+
+.text {
+    text-align: center;
+    color: #ffffff;
+}
